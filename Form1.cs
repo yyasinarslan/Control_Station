@@ -58,6 +58,7 @@ namespace Control_Station
             try
             {
                 string message = "UPDATE";
+
                 SendJsonCommand(modeSelection, message, "NOMOVE", 0, 0, 0);
                 ///***** Aşağıdaki 2 satırı fonksiyon yapıp thread ile çağırabilirsin ***///
                 //byte[] data = Encoding.ASCII.GetBytes(message);
@@ -82,6 +83,7 @@ namespace Control_Station
             btnStop.Click += new EventHandler(btnStop_Click);
 
             radiobtnManuel.Checked = true;
+            listBox1.SelectedIndex = 2;
 
         }
 
@@ -100,17 +102,18 @@ namespace Control_Station
 
         string modeSelection = "MANUEL";
 
+
         private void btnForward_Click(object sender, EventArgs e)
         {
             
             try
             {
                 string message = "FORWARD";
-
+                label2.Text = message;
                 ///***** Aşağıdaki 2 satırı fonksiyon yapıp thread ile çağırabilirsin ***///
                 //byte[] data = Encoding.ASCII.GetBytes(message);
                 //client.Send(data, data.Length, ip);
-                SendJsonCommand(modeSelection,"UPDATE", message, 40, 8, 0);
+                SendJsonCommand(modeSelection,"UPDATE", message, speedValue, 8, 0);
                
             }
             catch (Exception err)
@@ -130,7 +133,8 @@ namespace Control_Station
             try
             {
                 string message = "BACKWARD";
-                SendJsonCommand(modeSelection, "UPDATE", message, 40, 8, 0);
+                label2.Text = message;
+                SendJsonCommand(modeSelection, "UPDATE", message, speedValue, 8, 0);
                 
             }
             catch (Exception err)
@@ -151,6 +155,7 @@ namespace Control_Station
             try
             {
                 string message = "STOP";
+                label2.Text = message;
                 SendJsonCommand(modeSelection, "UPDATE", message, 0, 0, 0);
 
             }
@@ -168,7 +173,8 @@ namespace Control_Station
             try
             {
                 string message = "LEFT";
-                SendJsonCommand(modeSelection, "UPDATE", message, 50, 0, 100);
+                label2.Text = message;
+                SendJsonCommand(modeSelection, "UPDATE", message, 40, 0, 100);
                 
             }
             catch (Exception err)
@@ -185,7 +191,8 @@ namespace Control_Station
             try
             {
                 string message = "RIGHT";
-                SendJsonCommand(modeSelection, "UPDATE", message, 50, 0, 100);
+                label2.Text = message;
+                SendJsonCommand(modeSelection, "UPDATE", message, 40, 0, 100);
 
                 
             }
@@ -196,22 +203,22 @@ namespace Control_Station
         }
         void f1(string sensorAdi)
         {
-            label1.Invoke((MethodInvoker)(() => label1.Text = sensorAdi));
+            //label1.Invoke((MethodInvoker)(() => label1.Text = sensorAdi));
 
         }
         void f2(string value_1)
         {
-            label2.Invoke((MethodInvoker)(() => label2.Text = value_1));
+            //label2.Invoke((MethodInvoker)(() => label2.Text = value_1));
 
         }
         void f3(string value_2)
         {
-            label3.Invoke((MethodInvoker)(() => label3.Text = value_2));
+            //label3.Invoke((MethodInvoker)(() => label3.Text = value_2));
 
         }
         void f4(string value_3)
         {
-            label4.Invoke((MethodInvoker)(() => label4.Text = value_3));
+            //label4.Invoke((MethodInvoker)(() => label4.Text = value_3));
 
         }
         void f5(string value_4)
@@ -221,7 +228,7 @@ namespace Control_Station
         }
         void f6(string value_5)
         {
-            label15.Invoke((MethodInvoker)(() => label15.Text = value_5));
+            //label15.Invoke((MethodInvoker)(() => label15.Text = value_5));
 
         }
         private void ListenForData()
@@ -333,16 +340,51 @@ namespace Control_Station
             if (radiobtnManuel.Checked == true)
             {
                 modeSelection = "MANUEL";
+                label1.Text = modeSelection;
             }
             else if (radiobtnAuto.Checked == true)
             {
                 modeSelection = "AUTO";
+                label1.Text = modeSelection;
             }
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        int speedValue;
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (listBox1.SelectedIndex)
+            {
+                case 0:
+                    speedValue = 30;
+                    label15.Text = listBox1.SelectedItem.ToString();
+                    break;
+                case 1:
+                    speedValue = 40;
+                    label15.Text = listBox1.SelectedItem.ToString();
+                    break;
+                case 2:
+                    speedValue = 50;
+                    label15.Text = listBox1.SelectedItem.ToString();
+                    break;
+                case 3:
+                    speedValue = 60;
+                    label15.Text = listBox1.SelectedItem.ToString();
+                    break;
+                case 4:
+                    speedValue = 70;
+                    label15.Text = listBox1.SelectedItem.ToString();
+                    break;
+                default:
+                    speedValue = 50;
+                    label15.Text = listBox1.SelectedItem.ToString();
+                    break;
+            }
         }
 
 

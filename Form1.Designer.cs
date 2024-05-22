@@ -62,9 +62,12 @@
             this.radiobtnManuel = new System.Windows.Forms.RadioButton();
             this.radiobtnAuto = new System.Windows.Forms.RadioButton();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnForward
@@ -107,7 +110,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(124, 57);
+            this.label1.Location = new System.Drawing.Point(141, 57);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(13, 13);
@@ -121,7 +124,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 86);
+            this.label2.Location = new System.Drawing.Point(141, 86);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 13);
@@ -174,9 +177,9 @@
             this.label7.Location = new System.Drawing.Point(14, 86);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.Size = new System.Drawing.Size(111, 13);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Command:";
+            this.label7.Text = "Last Command Given:";
             // 
             // label8
             // 
@@ -184,9 +187,9 @@
             this.label8.Location = new System.Drawing.Point(14, 57);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.Size = new System.Drawing.Size(74, 13);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Mode:";
+            this.label8.Text = "Current Mode:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // btnLeft
@@ -221,7 +224,7 @@
             this.groupBox1.Controls.Add(this.btnLeft);
             this.groupBox1.Controls.Add(this.btnStop);
             this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(40, 73);
+            this.groupBox1.Location = new System.Drawing.Point(40, 106);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -245,11 +248,11 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(468, 34);
+            this.groupBox2.Location = new System.Drawing.Point(469, 38);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(172, 236);
+            this.groupBox2.Size = new System.Drawing.Size(232, 236);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Data";
@@ -267,7 +270,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(124, 115);
+            this.label15.Location = new System.Drawing.Point(141, 115);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(13, 13);
@@ -287,7 +290,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(124, 28);
+            this.label10.Location = new System.Drawing.Point(141, 28);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(13, 13);
@@ -297,7 +300,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(706, 44);
+            this.button1.Location = new System.Drawing.Point(769, 44);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 48);
@@ -314,7 +317,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(667, 120);
+            this.textBox1.Location = new System.Drawing.Point(730, 120);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
@@ -322,7 +325,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(784, 120);
+            this.textBox2.Location = new System.Drawing.Point(847, 120);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(76, 20);
@@ -330,7 +333,7 @@
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(702, 176);
+            this.btnSend.Location = new System.Drawing.Point(765, 176);
             this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(114, 38);
@@ -342,7 +345,7 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(762, 334);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(789, 315);
             this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
@@ -351,9 +354,9 @@
             // 
             // hScrollBar1
             // 
-            this.hScrollBar1.Location = new System.Drawing.Point(862, 203);
+            this.hScrollBar1.Location = new System.Drawing.Point(955, 202);
             this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(244, 82);
+            this.hScrollBar1.Size = new System.Drawing.Size(84, 82);
             this.hScrollBar1.TabIndex = 26;
             this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
             // 
@@ -381,9 +384,10 @@
             // radiobtnManuel
             // 
             this.radiobtnManuel.AutoSize = true;
-            this.radiobtnManuel.Location = new System.Drawing.Point(143, 34);
+            this.radiobtnManuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radiobtnManuel.Location = new System.Drawing.Point(76, 19);
             this.radiobtnManuel.Name = "radiobtnManuel";
-            this.radiobtnManuel.Size = new System.Drawing.Size(88, 17);
+            this.radiobtnManuel.Size = new System.Drawing.Size(112, 22);
             this.radiobtnManuel.TabIndex = 29;
             this.radiobtnManuel.TabStop = true;
             this.radiobtnManuel.Text = "Manuel Drive";
@@ -393,9 +397,10 @@
             // radiobtnAuto
             // 
             this.radiobtnAuto.AutoSize = true;
-            this.radiobtnAuto.Location = new System.Drawing.Point(255, 34);
+            this.radiobtnAuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radiobtnAuto.Location = new System.Drawing.Point(213, 19);
             this.radiobtnAuto.Name = "radiobtnAuto";
-            this.radiobtnAuto.Size = new System.Drawing.Size(112, 17);
+            this.radiobtnAuto.Size = new System.Drawing.Size(149, 22);
             this.radiobtnAuto.TabIndex = 30;
             this.radiobtnAuto.TabStop = true;
             this.radiobtnAuto.Text = "Autonomous Drive";
@@ -406,24 +411,48 @@
             this.listBox1.BackColor = System.Drawing.SystemColors.Control;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Items.AddRange(new object[] {
-            "30",
-            "40",
-            "50",
-            "60",
-            "70"});
-            this.listBox1.Location = new System.Drawing.Point(475, 288);
+            "Very Slow",
+            "Slow",
+            "Normal",
+            "Fast",
+            "Very Fast"});
+            this.listBox1.Location = new System.Drawing.Point(488, 315);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(48, 69);
+            this.listBox1.Size = new System.Drawing.Size(76, 69);
             this.listBox1.TabIndex = 31;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radiobtnAuto);
+            this.groupBox3.Controls.Add(this.radiobtnManuel);
+            this.groupBox3.Location = new System.Drawing.Point(40, 38);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(424, 54);
+            this.groupBox3.TabIndex = 32;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Mode Selection";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(483, 299);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(87, 13);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Speed Setting";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1443, 765);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.radiobtnAuto);
-            this.Controls.Add(this.radiobtnManuel);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.hScrollBar1);
@@ -436,12 +465,15 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,6 +513,8 @@
         private System.Windows.Forms.RadioButton radiobtnManuel;
         private System.Windows.Forms.RadioButton radiobtnAuto;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label12;
     }
 }
 
