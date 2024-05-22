@@ -84,7 +84,8 @@ namespace Control_Station
 
             radiobtnManuel.Checked = true;
             listBox1.SelectedIndex = 2;
-
+            listBox2.SelectedIndex = 0;
+            listBox3.SelectedIndex = 0;
         }
 
         private void SendData(string transferMessage)
@@ -341,11 +342,52 @@ namespace Control_Station
             {
                 modeSelection = "MANUEL";
                 label1.Text = modeSelection;
+                btnGO.Visible = false;
+                btnGO.Enabled = false;
+                btnForward.Visible = true;
+                btnForward.Enabled = true;
+                btnBackward.Visible = true;
+                btnBackward.Enabled = true;
+                btnStop.Visible = true;
+                btnStop.Enabled = true;
+                btnLeft.Visible = true;
+                btnLeft.Enabled = true;
+                btnRight.Visible = true;
+                btnRight.Enabled = true;
+                label3.Visible = false;
+                label4.Visible = false;
+                label5.Visible = false;
+                label6.Visible = false;
+                label13.Visible = false;
+                label16.Visible = false;
+                listBox2.Visible = false;
+                listBox3.Visible = false;
+
             }
             else if (radiobtnAuto.Checked == true)
             {
                 modeSelection = "AUTO";
                 label1.Text = modeSelection;
+                btnGO.Visible = true;
+                btnGO.Enabled = true;
+                btnForward.Visible = false;
+                btnForward.Enabled = false;
+                btnBackward.Visible = false;
+                btnBackward.Enabled = false;
+                btnStop.Visible = false;
+                btnStop.Enabled = false;
+                btnLeft.Visible = false;
+                btnLeft.Enabled = false;
+                btnRight.Visible = false;
+                btnRight.Enabled = false;
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                label6.Visible = true;
+                label13.Visible = true;
+                label16.Visible = true;
+                listBox2.Visible = true;
+                listBox3.Visible = true;
             }
         }
 
@@ -383,6 +425,73 @@ namespace Control_Station
                 default:
                     speedValue = 50;
                     label15.Text = listBox1.SelectedItem.ToString();
+                    break;
+            }
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+        int target_distance;
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (listBox2.SelectedIndex)
+            {
+                case 0:
+                    target_distance = Convert.ToInt32(listBox2.SelectedItem);
+                    label3.Text = listBox2.SelectedItem.ToString();
+                    break;
+                case 1:
+                    target_distance = Convert.ToInt32(listBox2.SelectedItem);
+                    label3.Text = listBox2.SelectedItem.ToString();
+                    break;
+                case 2:
+                    target_distance = Convert.ToInt32(listBox2.SelectedItem);
+                    label3.Text = listBox2.SelectedItem.ToString();
+                    break;
+                case 3:
+                    target_distance = Convert.ToInt32(listBox2.SelectedItem);
+                    label3.Text = listBox2.SelectedItem.ToString();
+                    break;
+                case 4:
+                    target_distance = Convert.ToInt32(listBox2.SelectedItem);
+                    label3.Text = listBox2.SelectedItem.ToString();
+                    break;
+                default:
+                    target_distance = Convert.ToInt32(listBox2.SelectedItem);
+                    label3.Text = listBox2.SelectedItem.ToString();
+                    break;
+            }
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (listBox3.SelectedIndex)
+            {
+                case 0:
+                    target_distance = Convert.ToInt32(listBox3.SelectedItem);
+                    label4.Text = listBox3.SelectedItem.ToString();
+                    break;
+                case 1:
+                    target_distance = Convert.ToInt32(listBox3.SelectedItem);
+                    label4.Text = listBox3.SelectedItem.ToString();
+                    break;
+                case 2:
+                    target_distance = Convert.ToInt32(listBox3.SelectedItem);
+                    label4.Text = listBox3.SelectedItem.ToString();
+                    break;
+                case 3:
+                    target_distance = Convert.ToInt32(listBox3.SelectedItem);
+                    label4.Text = listBox3.SelectedItem.ToString();
+                    break;
+                case 4:
+                    target_distance = Convert.ToInt32(listBox3.SelectedItem);
+                    label4.Text = listBox3.SelectedItem.ToString();
+                    break;
+                default:
+                    target_distance = Convert.ToInt32(listBox3.SelectedItem);
+                    label4.Text = listBox3.SelectedItem.ToString();
                     break;
             }
         }
