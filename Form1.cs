@@ -239,12 +239,12 @@ namespace Control_Station
         }
         void f2(string value_1)
         {
-            lblTemperature.Invoke((MethodInvoker)(() => lblTemperature.Text = value_1));
+           // lblTemperature.Invoke((MethodInvoker)(() => lblTemperature.Text = value_1));
 
         }
         void f3(string value_2)
         {
-            lblHumidity.Invoke((MethodInvoker)(() => lblHumidity.Text = value_2));
+           // lblHumidity.Invoke((MethodInvoker)(() => lblHumidity.Text = value_2));
 
         }
         void f4(string value_3)
@@ -288,14 +288,14 @@ namespace Control_Station
                 SensorData sensorData = JsonConvert.DeserializeObject<SensorData>(jsonData);
                 
                 Invoke(new Action(() => f5(sensorData.cpuTemperature.ToString())));
-                if (sensorData.amb_Temperature != 0)
-                {
-                    Invoke(new Action(() => f2(sensorData.amb_Temperature.ToString())));
-                }
-                if (sensorData.amb_Humidity != 0)
-                {
-                    Invoke(new Action(() => f3(sensorData.amb_Humidity.ToString())));
-                }
+                //if (sensorData.amb_Temperature != 0)
+                //{
+                //    Invoke(new Action(() => f2(sensorData.amb_Temperature.ToString())));
+                //}
+                //if (sensorData.amb_Humidity != 0)
+                //{
+                //    Invoke(new Action(() => f3(sensorData.amb_Humidity.ToString())));
+                //}
                 
                 
 
@@ -460,26 +460,32 @@ namespace Control_Station
             {
                 case 0:
                     target_distance = Convert.ToInt32(listBox2.SelectedItem);
+                    target_distance = 0;
                     label3.Text = listBox2.SelectedItem.ToString();
                     break;
                 case 1:
                     target_distance = Convert.ToInt32(listBox2.SelectedItem);
+                    target_distance = 2;
                     label3.Text = listBox2.SelectedItem.ToString();
                     break;
                 case 2:
                     target_distance = Convert.ToInt32(listBox2.SelectedItem);
+                    target_distance = 4;
                     label3.Text = listBox2.SelectedItem.ToString();
                     break;
                 case 3:
                     target_distance = Convert.ToInt32(listBox2.SelectedItem);
+                    target_distance = 7;
                     label3.Text = listBox2.SelectedItem.ToString();
                     break;
                 case 4:
                     target_distance = Convert.ToInt32(listBox2.SelectedItem);
+                    target_distance = 9;
                     label3.Text = listBox2.SelectedItem.ToString();
                     break;
                 default:
                     target_distance = Convert.ToInt32(listBox2.SelectedItem);
+                    target_distance = 0;
                     label3.Text = listBox2.SelectedItem.ToString();
                     break;
             }
@@ -583,6 +589,16 @@ namespace Control_Station
         {
 
         }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     //public class SensorData
     //{
@@ -598,11 +614,6 @@ namespace Control_Station
     {
         public int cpuTemperature { get; set; }
         public string obsMessage { get; set; }
-        public int amb_Temperature { get; set; }
-        public int amb_Humidity { get; set; }
-
-
-
     }
     public class RoverCommand
     {
