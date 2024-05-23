@@ -45,6 +45,7 @@
             this.btnLeft = new System.Windows.Forms.Button();
             this.btnRight = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblObstacle = new System.Windows.Forms.Label();
             this.btnGO = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.lblObstacle = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -241,6 +241,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ControlCommands";
             this.groupBox1.Visible = false;
+            // 
+            // lblObstacle
+            // 
+            this.lblObstacle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObstacle.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblObstacle.Location = new System.Drawing.Point(89, 156);
+            this.lblObstacle.Name = "lblObstacle";
+            this.lblObstacle.Size = new System.Drawing.Size(252, 67);
+            this.lblObstacle.TabIndex = 15;
+            this.lblObstacle.Text = "An obstacle has been detected, \r\nthe halt mechanism activated! \r\nWaiting for a ne" +
+    "w command..";
+            this.lblObstacle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnGO
             // 
@@ -485,14 +497,6 @@
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(421, 236);
             this.axWindowsMediaPlayer1.TabIndex = 25;
             // 
-            // lblObstacle
-            // 
-            this.lblObstacle.AutoSize = true;
-            this.lblObstacle.Location = new System.Drawing.Point(289, 191);
-            this.lblObstacle.Name = "lblObstacle";
-            this.lblObstacle.Size = new System.Drawing.Size(0, 13);
-            this.lblObstacle.TabIndex = 15;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,7 +515,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);

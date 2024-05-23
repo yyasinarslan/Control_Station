@@ -40,6 +40,8 @@ namespace Control_Station
             this.KeyPreview = true;  // Form'un tuş olaylarını işleyebilmesi için gerekli
             this.KeyDown += new KeyEventHandler(Form1_KeyDown);
             this.KeyUp += new KeyEventHandler(Form1_KeyUp);
+
+            
         }
         private void TimerOnTick(object sender, EventArgs ea)
         {
@@ -83,7 +85,9 @@ namespace Control_Station
             radiobtnManuel.Checked = true;
             listBox1.SelectedIndex = 2;
             listBox2.SelectedIndex = 0;
-            listBox3.SelectedIndex = 0;
+            listBox3.SelectedIndex = 2;
+
+            lblObstacle.Text = "";
         }
 
 
@@ -179,6 +183,8 @@ namespace Control_Station
 
         private void btnGO_Click(object sender, EventArgs e)
         {
+            lblObstacle.Text = "";
+           
             try
             {
                 int listbox3_value = Convert.ToInt32(listBox3.SelectedItem.ToString());
@@ -229,8 +235,7 @@ namespace Control_Station
 
         void f1(string sensorAdi)
         {
-            //label1.Invoke((MethodInvoker)(() => label1.Text = sensorAdi));
-
+            lblObstacle.Invoke((MethodInvoker)(() => lblObstacle.Text = sensorAdi));
         }
         void f2(string value_1)
         {
@@ -281,20 +286,29 @@ namespace Control_Station
 
 
                 SensorData sensorData = JsonConvert.DeserializeObject<SensorData>(jsonData);
-
                 
-
-                Invoke(new Action(() => f1(sensorData.encoder.ToString())));
-                Invoke(new Action(() => f2(sensorData.ultrasonic1.ToString())));
-                Invoke(new Action(() => f3(sensorData.ultrasonic2.ToString())));
-                Invoke(new Action(() => f4(sensorData.ultrasonic3.ToString())));
                 Invoke(new Action(() => f5(sensorData.cpuTemperature.ToString())));
-                Invoke(new Action(() => f6(sensorData.randomValue.ToString())));
 
+               // Invoke(new Action(() => f1(sensorData.obsMessage.ToString())));
+                if (sensorData.obsMessage == "An obstacle has been detected")
                 
+                {
 
+                    Invoke(new Action(() => f1("An obstacle has been detected, the halt mechanism activated! Waiting for a new command..")));
+                   
+                }
                 
-               
+                //Invoke(new Action(() => f1(sensorData.encoder.ToString())));
+                //Invoke(new Action(() => f2(sensorData.ultrasonic1.ToString())));
+                //Invoke(new Action(() => f3(sensorData.ultrasonic2.ToString())));
+                //Invoke(new Action(() => f4(sensorData.ultrasonic3.ToString())));
+                //Invoke(new Action(() => f5(sensorData.cpuTemperature.ToString())));
+                //Invoke(new Action(() => f6(sensorData.randomValue.ToString())));
+
+
+
+
+
                 Array.Clear(receive, 0, receive.Length);
                 
             }
@@ -366,6 +380,7 @@ namespace Control_Station
                 label16.Visible = false;
                 listBox2.Visible = false;
                 listBox3.Visible = false;
+                lblObstacle.Visible = false;
 
             }
             else if (radiobtnAuto.Checked == true)
@@ -392,6 +407,7 @@ namespace Control_Station
                 label16.Visible = true;
                 listBox2.Visible = true;
                 listBox3.Visible = true;
+                lblObstacle.Visible = true;
             }
         }
 
@@ -548,17 +564,22 @@ namespace Control_Station
         {
 
         }
-
-
     }
+    //public class SensorData
+    //{
+    //    public int encoder { get; set; }
+    //    public int ultrasonic1 { get; set; }
+    //    public int ultrasonic2 { get; set; }
+    //    public int ultrasonic3 { get; set; }
+    //    public int cpuTemperature { get; set; }
+    //    public int randomValue {  get; set; } 
+    //}
+
     public class SensorData
     {
-        public int encoder { get; set; }
-        public int ultrasonic1 { get; set; }
-        public int ultrasonic2 { get; set; }
-        public int ultrasonic3 { get; set; }
         public int cpuTemperature { get; set; }
-        public int randomValue {  get; set; } 
+        public string obsMessage { get; set; }
+
     }
     public class RoverCommand
     {
