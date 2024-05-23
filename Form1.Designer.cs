@@ -53,8 +53,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.btnRestart = new System.Windows.Forms.Button();
             this.radiobtnManuel = new System.Windows.Forms.RadioButton();
             this.radiobtnAuto = new System.Windows.Forms.RadioButton();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -66,9 +64,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblObstacle = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -88,7 +84,6 @@
             this.btnForward.Text = "FORWARD";
             this.btnForward.UseVisualStyleBackColor = false;
             this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
-           
             // 
             // btnBackward
             // 
@@ -229,6 +224,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblObstacle);
             this.groupBox1.Controls.Add(this.btnGO);
             this.groupBox1.Controls.Add(this.btnForward);
             this.groupBox1.Controls.Add(this.btnRight);
@@ -340,24 +336,6 @@
             this.timer2.Interval = 500;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // hScrollBar1
-            // 
-            this.hScrollBar1.Location = new System.Drawing.Point(0, 0);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(80, 17);
-            this.hScrollBar1.TabIndex = 37;
-            // 
-            // btnRestart
-            // 
-            this.btnRestart.Location = new System.Drawing.Point(962, 17);
-            this.btnRestart.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRestart.Name = "btnRestart";
-            this.btnRestart.Size = new System.Drawing.Size(56, 41);
-            this.btnRestart.TabIndex = 28;
-            this.btnRestart.Text = "restart";
-            this.btnRestart.UseVisualStyleBackColor = true;
-            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
-            // 
             // radiobtnManuel
             // 
             this.radiobtnManuel.AutoSize = true;
@@ -382,6 +360,7 @@
             this.radiobtnAuto.TabStop = true;
             this.radiobtnAuto.Text = "Autonomous Drive";
             this.radiobtnAuto.UseVisualStyleBackColor = true;
+            this.radiobtnAuto.CheckedChanged += new System.EventHandler(this.radiobtnAuto_CheckedChanged);
             // 
             // listBox1
             // 
@@ -397,7 +376,7 @@
             "Very Fast"});
             this.listBox1.Location = new System.Drawing.Point(31, 52);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(89, 64);
+            this.listBox1.Size = new System.Drawing.Size(89, 79);
             this.listBox1.TabIndex = 31;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -448,7 +427,7 @@
             "40"});
             this.listBox2.Location = new System.Drawing.Point(185, 52);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(89, 64);
+            this.listBox2.Size = new System.Drawing.Size(89, 79);
             this.listBox2.TabIndex = 34;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
@@ -485,14 +464,14 @@
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 15;
             this.listBox3.Items.AddRange(new object[] {
+            "-90",
+            "-30",
             "0",
-            "15",
             "30",
-            "45",
-            "60"});
+            "90"});
             this.listBox3.Location = new System.Drawing.Point(345, 52);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(89, 64);
+            this.listBox3.Size = new System.Drawing.Size(89, 79);
             this.listBox3.TabIndex = 36;
             this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
@@ -506,29 +485,13 @@
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(421, 236);
             this.axWindowsMediaPlayer1.TabIndex = 25;
             // 
-            // textBox1
+            // lblObstacle
             // 
-            this.textBox1.Location = new System.Drawing.Point(705, 268);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 117);
-            this.textBox1.TabIndex = 38;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(837, 268);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 117);
-            this.textBox2.TabIndex = 39;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(979, 268);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(110, 117);
-            this.textBox3.TabIndex = 40;
+            this.lblObstacle.AutoSize = true;
+            this.lblObstacle.Location = new System.Drawing.Point(289, 191);
+            this.lblObstacle.Name = "lblObstacle";
+            this.lblObstacle.Size = new System.Drawing.Size(0, 13);
+            this.lblObstacle.TabIndex = 15;
             // 
             // Form1
             // 
@@ -536,13 +499,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1101, 576);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.btnRestart);
-            this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
@@ -553,6 +511,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -561,7 +520,6 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -590,8 +548,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
-        private System.Windows.Forms.Button btnRestart;
         private System.Windows.Forms.RadioButton radiobtnManuel;
         private System.Windows.Forms.RadioButton radiobtnAuto;
         private System.Windows.Forms.ListBox listBox1;
@@ -603,9 +559,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Button btnGO;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label lblObstacle;
     }
 }
 

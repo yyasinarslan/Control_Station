@@ -86,13 +86,12 @@ namespace Control_Station
             listBox3.SelectedIndex = 0;
         }
 
-       
 
 
-     
 
-        string modeSelection = "MANUEL";
 
+
+        string modeSelection;
 
         private void btnForward_Click(object sender, EventArgs e)
         {
@@ -182,9 +181,45 @@ namespace Control_Station
         {
             try
             {
-                string message = "AUTO";
-                label2.Text = message;
-                SendJsonCommand(modeSelection, "UPDATE", message, speedValue, target_distance, target_angle);
+                int listbox3_value = Convert.ToInt32(listBox3.SelectedItem.ToString());
+                if (listbox3_value < 0)
+                {
+                    string message = "LEFT";
+                    label2.Text = message;
+                    SendJsonCommand(modeSelection, "UPDATE", message, 40, target_distance, Math.Abs(target_angle));
+                    if (target_distance > 0)
+                    {
+                        string secondmessage = "FORWARD";
+                        label2.Text = secondmessage;
+                        SendJsonCommand(modeSelection, "UPDATE", secondmessage, speedValue, target_distance, 0);
+                    }
+                    else
+                    {
+                        string thirdmessage = "STOP";
+                        label2.Text = thirdmessage;
+                        SendJsonCommand(modeSelection, "UPDATE", thirdmessage, speedValue, target_distance, 0);
+                    }
+                }
+                else if (listbox3_value > 0)
+                {
+                    string message = "RIGHT";
+                    label2.Text = message;
+                    SendJsonCommand(modeSelection, "UPDATE", message, 40, target_distance, Math.Abs(target_angle));
+                }
+                else if (listbox3_value == 0)
+                {
+                    string message = "FORWARD";
+                    label2.Text = message;
+                    SendJsonCommand(modeSelection, "UPDATE", message, speedValue, target_distance, Math.Abs(target_angle));
+
+                }
+                else
+                {
+                    string message = "STOP";
+                    label2.Text = message;
+                    SendJsonCommand(modeSelection, "UPDATE", message, speedValue, target_distance, Math.Abs(target_angle));
+                }
+                
             }
             catch (Exception err)
             {
@@ -222,6 +257,11 @@ namespace Control_Station
             //label15.Invoke((MethodInvoker)(() => label15.Text = value_5));
 
         }
+        void f7(string obstacle)
+        {
+            lblObstacle.Invoke((MethodInvoker)(() => lblObstacle.Text = obstacle));
+
+        }
         private void ListenForData()
         {
             try
@@ -231,9 +271,14 @@ namespace Control_Station
                 byte[] receive = client.Receive(ref ip);
 
                 string jsonData = Encoding.UTF8.GetString(receive);
-                //NetworkStream stream = client.
-                
-                
+           
+
+
+                //byte[] receiveBytes = client.Receive(ref ip);
+                //string receiveString = Encoding.ASCII.GetString(receiveBytes);
+
+                //Invoke(new Action(() => f7(receiveString.ToString())));
+
 
                 SensorData sensorData = JsonConvert.DeserializeObject<SensorData>(jsonData);
 
@@ -293,10 +338,7 @@ namespace Control_Station
         }
 
 
-        private void btnRestart_Click(object sender, EventArgs e)
-        {
-            Application.Restart();  
-        }
+ 
 
         private void radiobtnManuel_CheckedChanged(object sender, EventArgs e)
         {
@@ -458,29 +500,33 @@ namespace Control_Station
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
+            if (modeSelection == "MANUEL")
             {
-                case Keys.W:
-                    string W = "FORWARD";
-                    label2.Text = W;
-                    SendJsonCommand(modeSelection, "UPDATE", W, speedValue, 1, 0);                 
-                    break;
-                case Keys.S:
-                    string S = "BACKWARD";
-                    label2.Text = S;
-                    SendJsonCommand(modeSelection, "UPDATE", S, speedValue, 1, 0);
-                    break;
-                case Keys.A:
-                    string A = "LEFT";
-                    label2.Text = A;
-                    SendJsonCommand(modeSelection, "UPDATE", A, 40, 0, 100);
-                    break;
-                case Keys.D:
-                    string D = "RIGHT";
-                    label2.Text = D;
-                    SendJsonCommand(modeSelection, "UPDATE", D, 40, 0, 100);
-                    break;
+                switch (e.KeyCode)
+                {
+                    case Keys.W:
+                        string W = "FORWARD";
+                        label2.Text = W;
+                        SendJsonCommand(modeSelection, "UPDATE", W, speedValue, 1, 0);
+                        break;
+                    case Keys.S:
+                        string S = "BACKWARD";
+                        label2.Text = S;
+                        SendJsonCommand(modeSelection, "UPDATE", S, speedValue, 1, 0);
+                        break;
+                    case Keys.A:
+                        string A = "LEFT";
+                        label2.Text = A;
+                        SendJsonCommand(modeSelection, "UPDATE", A, 40, 0, 100);
+                        break;
+                    case Keys.D:
+                        string D = "RIGHT";
+                        label2.Text = D;
+                        SendJsonCommand(modeSelection, "UPDATE", D, 40, 0, 100);
+                        break;
+                }
             }
+           
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -498,6 +544,10 @@ namespace Control_Station
             }
         }
 
+        private void radiobtnAuto_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
 
 
     }
