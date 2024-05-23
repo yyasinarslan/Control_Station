@@ -155,7 +155,7 @@ namespace Control_Station
             {
                 string message = "LEFT";
                 label2.Text = message;
-                SendJsonCommand(modeSelection, "UPDATE", message, 40, 0, 100);
+                SendJsonCommand(modeSelection, "UPDATE", message, speedValue, 0, 100);
                 
             }
             catch (Exception err)
@@ -171,7 +171,7 @@ namespace Control_Station
             {
                 string message = "RIGHT";
                 label2.Text = message;
-                SendJsonCommand(modeSelection, "UPDATE", message, 40, 0, 100);
+                SendJsonCommand(modeSelection, "UPDATE", message, speedValue, 0, 100);
 
                 
             }
@@ -239,12 +239,12 @@ namespace Control_Station
         }
         void f2(string value_1)
         {
-            //label2.Invoke((MethodInvoker)(() => label2.Text = value_1));
+            lblTemperature.Invoke((MethodInvoker)(() => lblTemperature.Text = value_1));
 
         }
         void f3(string value_2)
         {
-            //label3.Invoke((MethodInvoker)(() => label3.Text = value_2));
+            lblHumidity.Invoke((MethodInvoker)(() => lblHumidity.Text = value_2));
 
         }
         void f4(string value_3)
@@ -288,8 +288,18 @@ namespace Control_Station
                 SensorData sensorData = JsonConvert.DeserializeObject<SensorData>(jsonData);
                 
                 Invoke(new Action(() => f5(sensorData.cpuTemperature.ToString())));
+                if (sensorData.amb_Temperature != 0)
+                {
+                    Invoke(new Action(() => f2(sensorData.amb_Temperature.ToString())));
+                }
+                if (sensorData.amb_Humidity != 0)
+                {
+                    Invoke(new Action(() => f3(sensorData.amb_Humidity.ToString())));
+                }
+                
+                
 
-               // Invoke(new Action(() => f1(sensorData.obsMessage.ToString())));
+                // Invoke(new Action(() => f1(sensorData.obsMessage.ToString())));
                 if (sensorData.obsMessage == "An obstacle has been detected")
                 
                 {
@@ -299,8 +309,7 @@ namespace Control_Station
                 }
                 
                 //Invoke(new Action(() => f1(sensorData.encoder.ToString())));
-                //Invoke(new Action(() => f2(sensorData.ultrasonic1.ToString())));
-                //Invoke(new Action(() => f3(sensorData.ultrasonic2.ToString())));
+                
                 //Invoke(new Action(() => f4(sensorData.ultrasonic3.ToString())));
                 //Invoke(new Action(() => f5(sensorData.cpuTemperature.ToString())));
                 //Invoke(new Action(() => f6(sensorData.randomValue.ToString())));
@@ -343,13 +352,13 @@ namespace Control_Station
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //axWindowsMediaPlayer1.URL = "http://192.168.137.160:2222";
-            axWindowsMediaPlayer1.URL = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
-            axWindowsMediaPlayer1.Ctlcontrols.play();
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    //axWindowsMediaPlayer1.URL = "http://192.168.137.160:2222";
+        //    axWindowsMediaPlayer1.URL = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
+        //    axWindowsMediaPlayer1.Ctlcontrols.play();
             
-        }
+        //}
 
 
  
@@ -533,12 +542,12 @@ namespace Control_Station
                     case Keys.A:
                         string A = "LEFT";
                         label2.Text = A;
-                        SendJsonCommand(modeSelection, "UPDATE", A, 40, 0, 100);
+                        SendJsonCommand(modeSelection, "UPDATE", A, speedValue, 0, 100);
                         break;
                     case Keys.D:
                         string D = "RIGHT";
                         label2.Text = D;
-                        SendJsonCommand(modeSelection, "UPDATE", D, 40, 0, 100);
+                        SendJsonCommand(modeSelection, "UPDATE", D, speedValue, 0, 100);
                         break;
                 }
             }
@@ -564,6 +573,16 @@ namespace Control_Station
         {
 
         }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
     //public class SensorData
     //{
@@ -579,6 +598,10 @@ namespace Control_Station
     {
         public int cpuTemperature { get; set; }
         public string obsMessage { get; set; }
+        public int amb_Temperature { get; set; }
+        public int amb_Humidity { get; set; }
+
+
 
     }
     public class RoverCommand
