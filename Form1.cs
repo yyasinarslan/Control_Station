@@ -497,22 +497,27 @@ namespace Control_Station
             {
                 case 0:
                     target_angle = Convert.ToInt32(listBox3.SelectedItem);
+                    target_angle = 40;
                     label4.Text = listBox3.SelectedItem.ToString();
                     break;
                 case 1:
                     target_angle = Convert.ToInt32(listBox3.SelectedItem);
+                    target_angle = 20;
                     label4.Text = listBox3.SelectedItem.ToString();
                     break;
                 case 2:
                     target_angle = Convert.ToInt32(listBox3.SelectedItem);
+                    target_angle = 0;
                     label4.Text = listBox3.SelectedItem.ToString();
                     break;
                 case 3:
                     target_angle = Convert.ToInt32(listBox3.SelectedItem);
+                    target_angle = 20;
                     label4.Text = listBox3.SelectedItem.ToString();
                     break;
                 case 4:
                     target_angle = Convert.ToInt32(listBox3.SelectedItem);
+                    target_angle = 40;
                     label4.Text = listBox3.SelectedItem.ToString();
                     break;
                 default:
@@ -531,6 +536,24 @@ namespace Control_Station
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.M)
+            {
+                switch (radiobtnManuel.Checked)
+                {
+                    case true:
+                        radiobtnManuel.Checked = false;
+                        radiobtnAuto.Checked = true;
+                        radiobtnAuto_CheckedChanged(radiobtnAuto, EventArgs.Empty);
+                        break;
+                    case false:
+                        radiobtnAuto.Checked = false;
+                        radiobtnManuel.Checked = true;
+                        radiobtnManuel_CheckedChanged(radiobtnManuel, EventArgs.Empty);
+                        break;
+                    default:
+                        break;
+                }
+            }
             if (modeSelection == "MANUEL")
             {
                 switch (e.KeyCode)
@@ -555,6 +578,7 @@ namespace Control_Station
                         label2.Text = D;
                         SendJsonCommand(modeSelection, "UPDATE", D, speedValue, 0, 100);
                         break;
+                    
                 }
             }
            
@@ -577,7 +601,59 @@ namespace Control_Station
 
         private void radiobtnAuto_CheckedChanged(object sender, EventArgs e)
         {
+            if (radiobtnManuel.Checked == true)
+            {
+                modeSelection = "MANUEL";
+                label1.Text = modeSelection;
+                btnGO.Visible = false;
+                btnGO.Enabled = false;
+                btnForward.Visible = true;
+                btnForward.Enabled = true;
+                btnBackward.Visible = true;
+                btnBackward.Enabled = true;
+                btnStop.Visible = true;
+                btnStop.Enabled = true;
+                btnLeft.Visible = true;
+                btnLeft.Enabled = true;
+                btnRight.Visible = true;
+                btnRight.Enabled = true;
+                label3.Visible = false;
+                label4.Visible = false;
+                label5.Visible = false;
+                label6.Visible = false;
+                label13.Visible = false;
+                label16.Visible = false;
+                listBox2.Visible = false;
+                listBox3.Visible = false;
+                lblObstacle.Visible = false;
 
+            }
+            else if (radiobtnAuto.Checked == true)
+            {
+                modeSelection = "AUTO";
+                label1.Text = modeSelection;
+                btnGO.Visible = true;
+                btnGO.Enabled = true;
+                btnForward.Visible = false;
+                btnForward.Enabled = false;
+                btnBackward.Visible = false;
+                btnBackward.Enabled = false;
+                btnStop.Visible = false;
+                btnStop.Enabled = false;
+                btnLeft.Visible = false;
+                btnLeft.Enabled = false;
+                btnRight.Visible = false;
+                btnRight.Enabled = false;
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                label6.Visible = true;
+                label13.Visible = true;
+                label16.Visible = true;
+                listBox2.Visible = true;
+                listBox3.Visible = true;
+                lblObstacle.Visible = true;
+            }
         }
 
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
@@ -596,6 +672,16 @@ namespace Control_Station
         }
 
         private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_KeyDown_1(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }

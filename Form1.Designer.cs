@@ -74,7 +74,7 @@
             this.btnForward.BackColor = System.Drawing.Color.Lime;
             this.btnForward.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnForward.Location = new System.Drawing.Point(153, 20);
-            this.btnForward.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnForward.Margin = new System.Windows.Forms.Padding(2);
             this.btnForward.Name = "btnForward";
             this.btnForward.Size = new System.Drawing.Size(121, 51);
             this.btnForward.TabIndex = 0;
@@ -88,7 +88,7 @@
             this.btnBackward.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBackward.ForeColor = System.Drawing.SystemColors.Control;
             this.btnBackward.Location = new System.Drawing.Point(153, 172);
-            this.btnBackward.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBackward.Margin = new System.Windows.Forms.Padding(2);
             this.btnBackward.Name = "btnBackward";
             this.btnBackward.Size = new System.Drawing.Size(121, 51);
             this.btnBackward.TabIndex = 1;
@@ -101,7 +101,7 @@
             this.btnStop.BackColor = System.Drawing.Color.Red;
             this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnStop.Location = new System.Drawing.Point(153, 96);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(2);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(121, 51);
             this.btnStop.TabIndex = 2;
@@ -198,7 +198,7 @@
             this.btnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnLeft.Location = new System.Drawing.Point(11, 96);
-            this.btnLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLeft.Margin = new System.Windows.Forms.Padding(2);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(121, 51);
             this.btnLeft.TabIndex = 12;
@@ -211,7 +211,7 @@
             this.btnRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnRight.Location = new System.Drawing.Point(292, 96);
-            this.btnRight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRight.Margin = new System.Windows.Forms.Padding(2);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(121, 51);
             this.btnRight.TabIndex = 13;
@@ -230,9 +230,9 @@
             this.groupBox1.Controls.Add(this.btnStop);
             this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(40, 257);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(424, 235);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
@@ -256,7 +256,7 @@
             this.btnGO.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnGO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGO.Location = new System.Drawing.Point(153, 96);
-            this.btnGO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGO.Margin = new System.Windows.Forms.Padding(2);
             this.btnGO.Name = "btnGO";
             this.btnGO.Size = new System.Drawing.Size(121, 51);
             this.btnGO.TabIndex = 14;
@@ -279,9 +279,9 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(468, 257);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(232, 235);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
@@ -331,8 +331,8 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(767, 99);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(250, 506);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 48);
             this.button1.TabIndex = 16;
@@ -479,9 +479,9 @@
             this.listBox3.ItemHeight = 15;
             this.listBox3.Items.AddRange(new object[] {
             "-90",
-            "-30",
+            "-45",
             "0",
-            "30",
+            "45",
             "90"});
             this.listBox3.Location = new System.Drawing.Point(347, 52);
             this.listBox3.Name = "listBox3";
@@ -500,11 +500,13 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown_1);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -540,7 +542,7 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-    //    private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        //private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.RadioButton radiobtnManuel;
         private System.Windows.Forms.RadioButton radiobtnAuto;
         private System.Windows.Forms.ListBox listBox1;
