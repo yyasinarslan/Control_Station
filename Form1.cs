@@ -58,7 +58,7 @@ namespace Control_Station
         private void button1_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
-            groupBox1 .Visible = true;  
+            groupBox1.Visible = true;
             try
             {
                 string message = "UPDATE";
@@ -265,7 +265,7 @@ namespace Control_Station
         }
         void f7(string obstacle)
         {
-            lblObstacle.Invoke((MethodInvoker)(() => lblObstacle.Text = obstacle));
+            //lblObstacle.Invoke((MethodInvoker)(() => lblObstacle.Text = obstacle));
 
         }
         private void ListenForData()
@@ -301,12 +301,12 @@ namespace Control_Station
                 
 
                 // Invoke(new Action(() => f1(sensorData.obsMessage.ToString())));
-                if (sensorData.obsMessage == "An obstacle has been detected")
+                if (sensorData.obsMessage == "Obstacle Detected")
                 
                 {
+                   // lblObstacle.Visible = true;
+                    Invoke(new Action(() => f1(sensorData.obsMessage.ToString())));
 
-                    Invoke(new Action(() => f1("An obstacle has been detected, the halt mechanism activated! Waiting for a new command..")));
-                   
                 }
                 
                 //Invoke(new Action(() => f1(sensorData.encoder.ToString())));
@@ -580,6 +580,13 @@ namespace Control_Station
                         SendJsonCommand(modeSelection, "UPDATE", D, speedValue, 0, 100);
                         break;
                     
+                }
+            }
+            if (modeSelection == "AUTO")
+            {
+                if (e.KeyCode == Keys.G)
+                {
+                    btnGO.PerformClick();
                 }
             }
            

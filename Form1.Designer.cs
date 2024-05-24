@@ -65,18 +65,19 @@
             this.label16 = new System.Windows.Forms.Label();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.axWindowsMediaPlayer2 = new AxWMPLib.AxWindowsMediaPlayer();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnForward
             // 
+            this.btnForward.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnForward.BackColor = System.Drawing.Color.Lime;
             this.btnForward.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnForward.Location = new System.Drawing.Point(153, 20);
@@ -90,6 +91,7 @@
             // 
             // btnBackward
             // 
+            this.btnBackward.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBackward.BackColor = System.Drawing.SystemColors.MenuText;
             this.btnBackward.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBackward.ForeColor = System.Drawing.SystemColors.Control;
@@ -104,6 +106,7 @@
             // 
             // btnStop
             // 
+            this.btnStop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnStop.BackColor = System.Drawing.Color.Red;
             this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnStop.Location = new System.Drawing.Point(153, 96);
@@ -117,6 +120,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(141, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -131,6 +135,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(141, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -141,6 +146,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(141, 145);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -151,6 +157,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(142, 172);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -161,6 +168,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(16, 172);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -171,6 +179,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(14, 145);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -181,6 +190,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(14, 87);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -191,6 +201,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(14, 58);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -201,6 +212,7 @@
             // 
             // btnLeft
             // 
+            this.btnLeft.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnLeft.Location = new System.Drawing.Point(11, 96);
@@ -214,6 +226,7 @@
             // 
             // btnRight
             // 
+            this.btnRight.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnRight.Location = new System.Drawing.Point(292, 96);
@@ -227,6 +240,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.lblObstacle);
             this.groupBox1.Controls.Add(this.btnGO);
             this.groupBox1.Controls.Add(this.btnForward);
@@ -234,7 +248,6 @@
             this.groupBox1.Controls.Add(this.btnBackward);
             this.groupBox1.Controls.Add(this.btnLeft);
             this.groupBox1.Controls.Add(this.btnStop);
-            this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(40, 257);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
@@ -243,10 +256,10 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Control Commands";
-            this.groupBox1.Visible = false;
             // 
             // lblObstacle
             // 
+            this.lblObstacle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblObstacle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObstacle.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblObstacle.Location = new System.Drawing.Point(89, 156);
@@ -259,6 +272,7 @@
             // 
             // btnGO
             // 
+            this.btnGO.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGO.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnGO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGO.Location = new System.Drawing.Point(153, 96);
@@ -272,6 +286,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label9);
@@ -296,6 +311,7 @@
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(14, 116);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -306,6 +322,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(141, 116);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -316,6 +333,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(14, 28);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -326,6 +344,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(141, 28);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -336,11 +355,11 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(250, 641);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Location = new System.Drawing.Point(550, 150);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 48);
+            this.button1.Size = new System.Drawing.Size(5, 5);
             this.button1.TabIndex = 16;
             this.button1.Text = "Connect";
             this.button1.UseVisualStyleBackColor = true;
@@ -354,6 +373,7 @@
             // 
             // radiobtnManuel
             // 
+            this.radiobtnManuel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radiobtnManuel.AutoSize = true;
             this.radiobtnManuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.radiobtnManuel.Location = new System.Drawing.Point(92, 19);
@@ -367,6 +387,7 @@
             // 
             // radiobtnAuto
             // 
+            this.radiobtnAuto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radiobtnAuto.AutoSize = true;
             this.radiobtnAuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.radiobtnAuto.Location = new System.Drawing.Point(229, 19);
@@ -380,6 +401,7 @@
             // 
             // listBox1
             // 
+            this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBox1.BackColor = System.Drawing.SystemColors.Control;
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listBox1.FormattingEnabled = true;
@@ -398,6 +420,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.Controls.Add(this.radiobtnAuto);
             this.groupBox3.Controls.Add(this.radiobtnManuel);
             this.groupBox3.Location = new System.Drawing.Point(40, 38);
@@ -409,6 +432,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.Location = new System.Drawing.Point(50, 16);
@@ -420,6 +444,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.Location = new System.Drawing.Point(181, 17);
@@ -432,6 +457,7 @@
             // 
             // listBox2
             // 
+            this.listBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBox2.BackColor = System.Drawing.SystemColors.Control;
             this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listBox2.FormattingEnabled = true;
@@ -450,6 +476,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.listBox3);
             this.groupBox4.Controls.Add(this.label12);
@@ -466,6 +493,7 @@
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label16.Location = new System.Drawing.Point(348, 17);
@@ -479,6 +507,7 @@
             // 
             // listBox3
             // 
+            this.listBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBox3.BackColor = System.Drawing.SystemColors.Control;
             this.listBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listBox3.FormattingEnabled = true;
@@ -497,8 +526,9 @@
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(718, 269);
+            this.button2.Location = new System.Drawing.Point(550, 210);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(111, 42);
             this.button2.TabIndex = 38;
@@ -506,17 +536,9 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // axWindowsMediaPlayer2
-            // 
-            this.axWindowsMediaPlayer2.Enabled = true;
-            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(542, 27);
-            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
-            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
-            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(263, 214);
-            this.axWindowsMediaPlayer2.TabIndex = 39;
-            // 
             // axWindowsMediaPlayer1
             // 
+            this.axWindowsMediaPlayer1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.axWindowsMediaPlayer1.Enabled = true;
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
             this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(4);
@@ -527,12 +549,22 @@
             this.axWindowsMediaPlayer1.Visible = false;
             this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter_1);
             // 
+            // axWindowsMediaPlayer2
+            // 
+            this.axWindowsMediaPlayer2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.axWindowsMediaPlayer2.Enabled = true;
+            this.axWindowsMediaPlayer2.Location = new System.Drawing.Point(705, 38);
+            this.axWindowsMediaPlayer2.Name = "axWindowsMediaPlayer2";
+            this.axWindowsMediaPlayer2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer2.OcxState")));
+            this.axWindowsMediaPlayer2.Size = new System.Drawing.Size(487, 454);
+            this.axWindowsMediaPlayer2.TabIndex = 39;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(929, 542);
+            this.ClientSize = new System.Drawing.Size(1204, 542);
             this.Controls.Add(this.axWindowsMediaPlayer2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox4);
@@ -554,8 +586,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).EndInit();
             this.ResumeLayout(false);
 
         }
